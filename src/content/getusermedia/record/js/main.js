@@ -84,6 +84,7 @@ function startRecording() {
   recordedBlobs = [];
   const mimeType = codecPreferences.options[codecPreferences.selectedIndex].value;
   const options = {mimeType};
+  options.videoBitsPerSecond = 100;
 
   try {
     mediaRecorder = new MediaRecorder(window.stream, options);
